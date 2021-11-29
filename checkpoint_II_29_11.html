@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "style.css">
+    <title> Formulário de Cadastro  </title>
+    <style>
+        @import url ('https://fonts.googleapis.com/css2? family = Barlow: wght @ 300 & display = swap');
+        html * {
+            color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        }
+        span {
+            background-color: rgba(2, 0, 0, 0.247);
+        }
+        #titulo {
+            color: rgb(248, 248, 248);
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 32px;
+            font-style: verdana;
+            font-weight: 200;
+            background-color: sienna;
+            padding: 10px;
+        }
+        #resumo {
+            padding: 20px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            font-style: verdana;
+        }
+        ul {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            font-style: verdana;
+            margin: 20px 0px;
+        }
+        #corpo {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Monumento_aos_Bandeirantes_-Santana_de_Parnaiba-Foto_Sandro_Almeida.jpg/1200px-Monumento_aos_Bandeirantes_-Santana_de_Parnaiba-Foto_Sandro_Almeida.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #principal {
+            text-align: center;
+        }
+        .subtitulo {
+            color:indigo;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 32px;
+            font-style: verdana;
+            font-weight: 200px;
+            padding: 10px;
+        }
+        #rodape {
+            text-align: center;
+            padding: 20px;
+        }
+        .icones {
+            margin: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+        </style>
+
+
+</head>
+
+<body id = "corpo">
+    <header id = "cabecalho">
+        <h1 id = "titulo"> Formulário de Cadastro </h1>
+    </header>
+    <div id="container"></div>
+  <script id="template">
+    <div class="contact-wrapper">
+    <div class="envelope {{ flipCard ? 'active' : '' }}">
+    <div class="back paper"></div>
+    <div class="form-wrapper">
+    <form>
+    <div class="top-wrapper">
+    <div class="input">
+    <label>Name</label>
+    <input type="text" name="name"/>
+    </div>
+    <div class="input">
+    <label>Phone</label>
+    <input type="text" name="phone"/>
+    </div>
+    <div class="input">
+    <label>Email</label>
+    <input type="text" name="_replyto"/>
+    </div>
+    </div>
+    <div class="bottom-wrapper">
+    <div class="input">
+    <label>Subject</label>
+    <input type="text" name="_subject"/>
+    </div>
+    <div class="input">
+    <label>Message</label>
+    <textarea rows="100" name="message"></textarea>
+    </div>
+  </script>
+        
+    </div>
+</body>
+
+</html>
