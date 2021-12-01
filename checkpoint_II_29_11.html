@@ -6,15 +6,13 @@
     <link rel = "stylesheet" href = "style.css">
     <title> Formulário de Cadastro  </title>
     <style>
-        @import url ('https://fonts.googleapis.com/css2? family = Barlow: wght @ 300 & display = swap');
+        @import url ('https://fonts.googleapis.com/css2? family = Biryani: wght @ 700 & display = swap');
         html * {
-            color: rgb(255, 255, 255);
+            color: rgb(14, 13, 13);
             margin: 0;
             padding: 0;
         }
-        span {
-            background-color: rgba(2, 0, 0, 0.247);
-        }
+        
         #titulo {
             color: rgb(248, 248, 248);
             text-align: center;
@@ -22,52 +20,52 @@
             font-size: 32px;
             font-style: verdana;
             font-weight: 200;
-            background-color: sienna;
+            background-color:rgb(122, 8, 8);
             padding: 10px;
         }
-        #resumo {
-            padding: 20px;
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 16px;
-            font-style: verdana;
-        }
-        ul {
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 16px;
-            font-style: verdana;
-            margin: 20px 0px;
-        }
+        
         #corpo {
-            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Monumento_aos_Bandeirantes_-Santana_de_Parnaiba-Foto_Sandro_Almeida.jpg/1200px-Monumento_aos_Bandeirantes_-Santana_de_Parnaiba-Foto_Sandro_Almeida.jpg");
+            background-image: url("https://media-exp1.licdn.com/dms/image/C4D1BAQE4aulUFwlszA/company-background_10000/0/1543778827646?e=2159024400&v=beta&t=x1Bn_Je0Rg8HNA8G6evTkN1Rpzq7ScmMz3XnFEIT_wU");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
-        #principal {
-            text-align: center;
-        }
-        .subtitulo {
-            color:indigo;
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 32px;
-            font-style: verdana;
-            font-weight: 200px;
-            padding: 10px;
-        }
-        #rodape {
-            text-align: center;
-            padding: 20px;
-        }
-        .icones {
-            margin: 20px;
-            width: 50px;
-            height: 50px;
+        .demo_wrap {
+    position: relative;
+    background: #5C97FF;
+    overflow: hidden;
+}
+.demo_wrap h1 {
+    padding: 100px;
+    position: relative;
+    z-index: 2;
+}
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4D1BAQE4aulUFwlszA/company-background_10000/0/1543778827646?e=2159024400&v=beta&t=x1Bn_Je0Rg8HNA8G6evTkN1Rpzq7ScmMz3XnFEIT_wU');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+}
+        
+        .container {
+            margin: 50px;
+            
         }
 
-        </style>
+
+        button:hover {
+            width: 100px;
+        }
+    </style>
 
 
 </head>
@@ -76,39 +74,92 @@
     <header id = "cabecalho">
         <h1 id = "titulo"> Formulário de Cadastro </h1>
     </header>
-    <div id="container"></div>
-  <script id="template">
-    <div class="contact-wrapper">
-    <div class="envelope {{ flipCard ? 'active' : '' }}">
-    <div class="back paper"></div>
-    <div class="form-wrapper">
-    <form>
-    <div class="top-wrapper">
-    <div class="input">
-    <label>Name</label>
-    <input type="text" name="name"/>
+    <div class="container">
+    
+        <form>
+            <div class="input">
+                <label for="Name">Nome</label>
+                <input type="text" name="name"/>
+            </div>
+        </form>
+
+        <form>
+            <div class="input">
+                <label for="Email">Email</label>
+                <input type="text" name="_replyto"/>
+            </div>
+        </form>
+
+        <form>
+            <div class="input">
+                <label for="Phone">Telefone</label>
+                <input type="text" name="phone"/>
+            </div>
+        </form>
+      
+        <form>
+            <div class="input">
+                <label for="Data de Nascimento">Data de Nascimento</label>
+                <input type="date" name="Data de Nascimento"/>
+            </div>
+        </form>
+
+        <form>
+            <div class="input"> 
+                <label for="Sim/Não">Tem mais de 18 anos?</label>
+                <input type="radio"> <label for="Sim">Sim</label>
+                <input type="radio"> <label for="Não">Não</label>
+    
+            </div>
+        </form>
+
+        <form>
+            <div>
+                <label for="Pontos Turísticos">Pontos Turísticos</label>
+                <select name="Pontos Turísticos" id="">
+                    <Option>
+                        Igreja Matriz
+                    </Option>
+
+                    <Option>
+                        Monumento dos Bandeirantes
+                    </Option>
+
+                    <Option>
+                        Barragem Edgard de Souza
+                    </Option>
+
+                </select>
+
+            </div>
+        </form>
+
+        <form>
+            <div>
+                <label for="Quais seus Interesses">Quais seus Interesses?</label>
+                <select name="Quais seus Interesses na Cidade?" id="">
+                    <Option>
+                        Turista
+                    </Option>
+
+                    <Option>
+                        Morador
+                    </Option>
+
+                    <Option>
+                        Estudante
+                    </Option>
+
+                </select>
+
+            </div>
+        </form>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
     </div>
-    <div class="input">
-    <label>Phone</label>
-    <input type="text" name="phone"/>
-    </div>
-    <div class="input">
-    <label>Email</label>
-    <input type="text" name="_replyto"/>
-    </div>
-    </div>
-    <div class="bottom-wrapper">
-    <div class="input">
-    <label>Subject</label>
-    <input type="text" name="_subject"/>
-    </div>
-    <div class="input">
-    <label>Message</label>
-    <textarea rows="100" name="message"></textarea>
-    </div>
-  </script>
         
-    </div>
+
 </body>
 
 </html>
